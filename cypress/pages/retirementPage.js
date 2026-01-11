@@ -15,7 +15,7 @@ class RetirementPage {
             .wait(700)
             .find('.flip-card-back .card-text')
             .invoke('text').then((text) => {
-                cy.log('Captured text: ' + text.trim());
+                cy.log('Text in 3rd tile: ' + text.trim());
             });
     }
     clickLetsGetStartedButton() {
