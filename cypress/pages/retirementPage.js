@@ -1,6 +1,6 @@
 import "cypress-real-events";
-
-class RetirementPage {
+import { BasePage } from "./basePage";
+class RetirementPage extends BasePage{
     get innovationSection() { return cy.get('.cards') }
     get machineLearningCard() { return cy.get('.card-wrapper').eq(2).find('.flip-card-inner') }
     get letsGetStartedButton() { return cy.get('a[title="Let\'s get started"]') }
@@ -22,13 +22,6 @@ class RetirementPage {
         this.letsGetStartedButton.click()
     }
 
-    verifyURL(url) {
-        cy.url().should('include', url)
-    }
-
-    verifyTitle(title) {
-        cy.title().should('eq', title)
-    }
 
 }
 

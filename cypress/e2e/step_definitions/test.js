@@ -1,6 +1,7 @@
 import {Given, When, Then} from "@badeball/cypress-cucumber-preprocessor";
 import { mainPage } from "../../pages/mainPage";
 import { retirementPage } from "../../pages/retirementPage";
+import { contactPage } from "../../pages/contactPage";
 
 Given('User navigates to Blankfactor main page', () => {
     cy.visit('/');
@@ -16,14 +17,19 @@ When('captures the text on the third element of the "Powering innovation" sectio
     retirementPage.hoverMachineLearningCard();
 });
 
+
+
+
+
+
 Then('clicks on the Let\'s get stated button', () => {
     retirementPage.clickLetsGetStartedButton();
 });
 
 Then("verifies that the URL contains {string}", (url) => {
-    retirementPage.verifyURL(url);
+    contactPage.verifyURL(url);
 });
 
 Then("the page title is {string}", (title) => {
-    retirementPage.verifyTitle(title);
+    contactPage.verifyTitle(title);
 });
