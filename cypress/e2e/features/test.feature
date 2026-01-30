@@ -1,4 +1,5 @@
 Feature: BlankFactor test
+
     Scenario: Navigate to Retirement and Wealth section through navbar link and verify contact page
         Given User navigates to Blankfactor main page
         When hover over the Industries link and clicks on Retirement and Wealth section

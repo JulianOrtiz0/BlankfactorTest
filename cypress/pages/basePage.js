@@ -1,5 +1,5 @@
 
-class BasePage {
+export class BasePage {
     verifyURL(url) {
         cy.url().should('include', url)
     }
@@ -9,4 +9,3 @@ class BasePage {
     }
 }
 
-export { BasePage };
